@@ -176,6 +176,9 @@ echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $BUILD_DIR/.profile.d/nodejs.sh
 
+echo "-----> Install Components"
+$BUILD_DIR/node_modules/component/bin/component-install
+
 if [ -f $BUILD_DIR/grunt.js ] || [ -f $BUILD_DIR/Gruntfile.js ] || [ -f $BUILD_DIR/Gruntfile.coffee ]; then
   run_npm "install grunt-cli"
   echo "-----> Found Gruntfile, running grunt heroku task"
