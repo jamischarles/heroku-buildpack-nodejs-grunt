@@ -4,6 +4,10 @@ Heroku Buildpack for Node.js
 This is the official [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Node.js apps. If you fork this repository, please **update this README** to explain what your fork does and why it's special.
 
 
+Different in this fork
+------------
+- `npm install` instead of `npm install --production`. This allows devDeps to be installed as well.
+
 How it Works
 ------------
 
